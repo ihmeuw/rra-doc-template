@@ -1,6 +1,7 @@
 {
   "author_name": "James Collins",
   "project_name": "RRA Project Documentation",
+  "project_slug_dagger": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "RRA Project Documentation contains all the boilerplate you need to start a new RRA project document."
 }
