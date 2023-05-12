@@ -21,6 +21,12 @@ Then create your documentation with this command (change path of template if nec
 
     cookiecutter gh:ihmeuw/rra-doc-template
 
+You can also do this over ssh if you have ssh keys configured to skip the login prompt.
+
+.. code-block:: sh
+
+    cookiecutter git@github.com:ihmeuw/rra-doc-template.git
+
 Cookiecutter asks you to enter all the information about your project (author,
 project name, description, etc.) and then generates your documentation in the specified
 folder (``docs`` by default).
