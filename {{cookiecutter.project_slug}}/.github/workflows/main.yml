@@ -1,33 +1,37 @@
-name: Build and Deploy
+name: Docs
+
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - '.github/workflows/main.yml'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v2
+      - name: Set up Python 3
+        uses: actions/setup-python@v4
         with:
           python-version: 3.10
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install sphinx
-
-      - name: Build
-        run: make html
-        working-directory: ./docs  # Update this to the directory where your docs are
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Set up workflow cache
+        uses: actions/cache@v3
         with:
-          branch: gh-pages  # This is the branch the action will deploy to.
-          folder: ./docs/_build/html  # This is the folder the action will deploy.
+          key: ${{ github.ref }}
+          path: .cache
+
+      - run: pip install mkdocs-material
+
+      - run: mkdocs gh-deploy --force
