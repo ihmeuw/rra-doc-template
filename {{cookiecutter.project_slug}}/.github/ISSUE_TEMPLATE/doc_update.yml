@@ -1,0 +1,12 @@
+name: Documentation update 📖
+description: Update the documentation for {{cookiecutter.project_name}}
+body:
+  - type: textarea
+    attributes:
+      label: Summary 💡
+      description: Write a short description of the update contained in this PR.
+  - type: textarea
+    attributes:
+      label: Motivation 🔦
+      description: What motivated you to make this change? Link to existing communication (e.g. Slack, email, meeting notes, asana issue, etc.) if possible.
+
