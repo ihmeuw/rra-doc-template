@@ -14,6 +14,6 @@ cookiecutter https://github.com/ihmeuw/rra-doc-template.git
 
 or, if you have ssh configured and don't like entering your password:
 
-```
+```shell
 cookiecutter git@github.com:ihmeuw/rra-doc-template.git
 ```
