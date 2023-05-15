@@ -23,3 +23,7 @@
 * [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
 * [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 * [CommonMark Spec](https://spec.commonmark.org/0.29/)
+
+### Mkdocs Material Extensions
+
+* [Markdown Extensions](https://squidfunk.github.io/mkdocs-material/reference/)
