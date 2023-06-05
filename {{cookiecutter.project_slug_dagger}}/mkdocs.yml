@@ -1,13 +1,10 @@
-site_name: RRA Population Project
+site_name: {{cookiecutter.project_name}}
+nav:
+  - Home: index.md
 theme:
   name: material
   features:
     - content.code.copy
-nav:
-  - Home: index.md
-  - Location Models:
-      - Kenya: location_models/kenya.md
-      - Brazil: location_models/brazil.md
 markdown_extensions:
   - abbr
   - admonition
@@ -48,7 +45,7 @@ plugins:
   - table-reader
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
-  - javascripts/tablesort.js
-  - javascripts/mathjax.js
+  - javascript/tablesort.js
+  - javascript/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

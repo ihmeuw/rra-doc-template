@@ -26,5 +26,5 @@ jobs:
         with:
           python-version: "3.10"
 
-      - run: pip install mkdocs-material
+      - run: pip install mkdocs-material mkdocs-table-reader-plugin
       - run: mkdocs gh-deploy --force
