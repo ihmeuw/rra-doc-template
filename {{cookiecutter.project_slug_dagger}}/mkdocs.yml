@@ -43,6 +43,7 @@ markdown_extensions:
   - tables
 plugins:
   - table-reader
+  - search
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - _javascript/tablesort.js
