@@ -1,6 +1,6 @@
 # Usage
 
-To use this template, you'll need to install (cookiecutter)[https://cookiecutter.readthedocs.io/en/stable/index.html]:
+To use this template, you'll need to install [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/index.html):
 
 ```shell
 pip install -U cookiecutter
